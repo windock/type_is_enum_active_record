@@ -1,6 +1,8 @@
+# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+require 'uri'
 require 'type_is_enum_active_record/module_info'
 
 Gem::Specification.new do |spec|
@@ -23,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'activerecord', '> 4.2.5'
-  spec.add_dependency 'type_is_enum'
+  spec.add_dependency 'type_is_enum', '~> 0.2.0'
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.4'
   spec.add_development_dependency 'rubocop', '~> 0.32.1'
